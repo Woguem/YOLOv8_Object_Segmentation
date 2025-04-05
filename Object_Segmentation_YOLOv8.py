@@ -1,3 +1,11 @@
+"""
+@author: Dr Yen Fred WOGUEM 
+
+@description: This script trains a GAN model to generate image
+
+"""
+
+
 from ultralytics import YOLO
 import cv2
 import matplotlib.pyplot as plt
@@ -5,6 +13,10 @@ import numpy as np
 from PIL import Image
 import requests
 from io import BytesIO
+from datetime import datetime
+
+start_time = datetime.now()  # Start timer
+
 
 def train_segmentation_model():
     """Train YOLOv8 segmentation model"""
@@ -108,6 +120,12 @@ run_segmentation(trained_model, test_image)
 # Video segmentation (None for webcam)
 # video_segmentation(trained_model, video_source=None)  # Use webcam
 # video_segmentation(trained_model, "video.mp4")  # Or video file
+
+
+end_time = datetime.now()  # End of timer
+execution_time = end_time - start_time
+print(f"\nDurée d'exécution : {execution_time}")
+
 
 
 
