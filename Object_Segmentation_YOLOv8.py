@@ -1,7 +1,7 @@
 """
 @author: Dr Yen Fred WOGUEM 
 
-@description: This script trains a GAN model to generate image
+@description: This script trains a YOLO model for image detection
 
 """
 
